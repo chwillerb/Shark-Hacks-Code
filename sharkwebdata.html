@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <button onclick='window.location.replace("index.html")'>HOME</button>
+  <h1>DATA</h1>
+  <div>
+  <center><img src="Figure_1.png" alt="Italian Trulli" style="width:800px;height:600px;" class="center"></center>
+</div>
+  <div id="piechart"></div>
+
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+
+  // Load google charts
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Draw the chart and set the chart values
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+    ['Shark attacks per month', 'Hours per Day'],
+    ['California', 2],
+    ['Florida', 22],
+    ['North Carolina', 3],
+    ['Maine', 1],
+    ['Hawai', 2]
+  ]);
+
+    // Optional; add a title and set the width and height of the chart
+    var options = {'title':'Shark Attacks in 2020', 'width':550, 'height':400};
+  }
+  </script>
+  <div>
+  <h2>Conclusion</h2>
+  <h4>In conclusion, sharks are most likely to populate and attack in areas with a higher temperature. This chart shows the correlation between the two and created a fitted curve to display it. We also experimented with a function that would show how many people would be attacked each month based on these states, but we are still in the process of finalizing it and finding out where the cut off is. This is not a linear relationship, but the chart illustrates the relationship in the best way possible through fitting an exponential function. This data could be a bit obscure because of the one outlying case when it was 40 degrees, but we tried to use a broad variety of data and hope to keep working on this to make it ever more accurate and implement the function.</h4>
+</div>
+  <center><button onclick='window.location.replace("sharkwebdatageographical.html")'>Geographic Data</button></center>
+<style>
+div {
+  padding-top: -10px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  line-height: 3 ;
+}
+
+button{
+  background-color: fff;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 2px;
+  transition-duration: 0.4s;
+  font-family: "Geneva";
+}
+button:hover{
+  background-color: #ddd;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+h1{
+  text-align: center;
+  font-family: "Geneva";
+}
+h2{
+  text-align: center;
+  font-family: "Geneva";
+}
+h3{
+  text-align: center;
+  font-family: "Geneva";
+}
+
+h4{
+  text-align: center;
+  font-family: "Geneva";
+}
+
+</style>

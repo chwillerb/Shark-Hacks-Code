@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <button onclick='window.location.replace("index.html")'>BACK</button>
+  <h1>Geographical Data</h1>
+<center><right><iframe src="https://www.google.com/maps/d/embed?mid=1fXQtLz8TvC1TnmEoKONXyp9wCcCWl3oW" width="640" height="480"></iframe><center>
+  <center><div id="piechart" class="clearfix"></div></center>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+
+  // Load google charts
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Draw the chart and set the chart values
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+    ['Shark attacks per month', 'Hours per Day'],
+    ['California', 2],
+    ['Florida', 22],
+    ['North Carolina', 3],
+    ['Maine', 1],
+    ['Hawai', 2]
+  ]);
+
+    // Optional; add a title and set the width and height of the chart
+    var options = {'title':'Shark Attacks in 2020', 'width':550, 'height':400};
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+  }
+  </script>
+
+<style>
+
+
+button{
+  background-color: fff;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  font-family: "Geneva";
+}
+button:hover{
+  background-color: #ddd;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.google_map{
+    width:55%;
+    margin-right:2%;
+    float: left;
+}
+.right iframe{
+   width:100%;
+   float: right;
+}
+.paragraph {
+    width:42%;
+    float: left;
+}
+.clearfix{
+    clear:both
+}
+h1{
+  text-align: center;
+  font-family: "Geneva";
+}
+h2{
+  padding:15px;
+  text-align: center;
+  font-family: "Geneva";
+}
+h3{
+  text-align: center;
+  font-family: "Geneva";
+}
+
+</style>
